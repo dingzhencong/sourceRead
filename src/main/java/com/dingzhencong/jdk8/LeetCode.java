@@ -8,7 +8,7 @@ public class LeetCode {
         LeetCode left = new LeetCode();
         left.fib(3);
 
-        System.out.println(left.coinChange(new Integer[]{2}, 3));
+//        System.out.println(left.coinChange(new Integer[]{2}, 3));
     }
 
     int fib(int n){
@@ -31,19 +31,19 @@ public class LeetCode {
     }
 
 
-    public int coinChange(Integer[] coins, int amount) {
-//        Arrays.sort(coins, Collections.reverseOrder());
-        int count = 0;
-        while (amount != 0) {
-            for (int i = coins.length - 1; i >= 0; i--) {
-                if (amount >= coins[i]) {
-                    count += amount / coins[i];
-                    amount %= coins[i];
-                }
-            }
-        }
-        return count;
-    }
+//    public int coinChange(Integer[] coins, int amount) {
+////        Arrays.sort(coins, Collections.reverseOrder());
+//        int count = 0;
+//        while (amount != 0) {
+//            for (int i = coins.length - 1; i >= 0; i--) {
+//                if (amount >= coins[i]) {
+//                    count += amount / coins[i];
+//                    amount %= coins[i];
+//                }
+//            }
+//        }
+//        return count;
+//    }
 
     public int coinChange(int[] coins, int amount) {
         int count = 0;
