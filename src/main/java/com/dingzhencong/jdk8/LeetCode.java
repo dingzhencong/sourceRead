@@ -45,13 +45,19 @@ public class LeetCode {
 //        return count;
 //    }
 
-    public int coinChange(int[] coins, int amount) {
+    public int coinChange(Integer[] coins, int amount) {
+//        Arrays.sort(coins, Collections.reverseOrder());
         int count = 0;
-        HashMap<Integer, Integer> hash = new HashMap<Integer, Integer> ();
-
+        while (amount != 0) {
+            for (int i = coins.length - 1; i >= 0; i--) {
+                if (amount >= coins[i]) {
+                    count += amount / coins[i];
+                    amount %= coins[i];
+                }
+            }
+        }
         return count;
     }
-
     int dp(HashMap<Integer, Integer> hash, int[] coins,int amount) {
         if (hash.containsKey(amount)) {
             return hash.get(amount);
