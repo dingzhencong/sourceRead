@@ -30,51 +30,5 @@ public class LeetCode {
         return dpTabale[n];
     }
 
-
-//    public int coinChange(Integer[] coins, int amount) {
-////        Arrays.sort(coins, Collections.reverseOrder());
-//        int count = 0;
-//        while (amount != 0) {
-//            for (int i = coins.length - 1; i >= 0; i--) {
-//                if (amount >= coins[i]) {
-//                    count += amount / coins[i];
-//                    amount %= coins[i];
-//                }
-//            }
-//        }
-//        return count;
-//    }
-
-    public int coinChange(Integer[] coins, int amount) {
-//        Arrays.sort(coins, Collections.reverseOrder());
-        int count = 0;
-        while (amount != 0) {
-            for (int i = coins.length - 1; i >= 0; i--) {
-                if (amount >= coins[i]) {
-                    count += amount / coins[i];
-                    amount %= coins[i];
-                }
-            }
-        }
-        return count;
-    }
-    int dp(HashMap<Integer, Integer> hash, int[] coins,int amount) {
-        if (hash.containsKey(amount)) {
-            return hash.get(amount);
-        }
-        if (amount == 0) {
-            return 0;
-        }
-        if (amount < 0) {
-            return -1;
-        }
-        for (int coin : coins) {
-            int subProblem = dp(hash, coins, amount - coin);
-            if (subProblem == -1) {
-                continue;
-            }
-            
-        }
-        return 0;
-    }
+    
 }
