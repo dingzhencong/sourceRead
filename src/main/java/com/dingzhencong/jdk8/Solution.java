@@ -10,9 +10,9 @@ class Solution {
         if (nums == null || nums.length < 4) {
             return quadruplets;
         }
-        Arrays.sort(nums);
+//        Arrays.sort(nums);
         int length = nums.length;
-        for (int i = 0; i < length - 3; i++) {
+        for (int i = 0; i < length - 1; i++) {
             if (i > 0 && nums[i] == nums[i - 1]) {
                 continue;
             }
