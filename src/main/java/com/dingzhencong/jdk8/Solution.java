@@ -23,15 +23,6 @@ class Solution {
                 continue;
             }
             for (int j = i + 1; j < length - 2; j++) {
-                if (j > i + 1 && nums[j] == nums[j - 1]) {
-                    continue;
-                }
-                if (nums[i] + nums[j] + nums[j + 1] + nums[j + 2] > target) {
-                    break;
-                }
-                if (nums[i] + nums[j] + nums[length - 2] + nums[length - 1] < target) {
-                    continue;
-                }
                 int left = j + 1, right = length - 1;
                 while (left < right) {
                     int sum = nums[i] + nums[j] + nums[left] + nums[right];
