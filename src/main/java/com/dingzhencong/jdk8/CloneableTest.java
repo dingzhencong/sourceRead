@@ -1,5 +1,7 @@
 package com.dingzhencong.jdk8;
 
+import java.util.HashMap;
+
 public class CloneableTest implements Cloneable {
     private String str;
     private Integer[] integers;
@@ -43,5 +45,7 @@ public class CloneableTest implements Cloneable {
         so1.setStr("222");
         System.out.println("so0.getStr()£º" + so0.getStr());
         System.out.println("so1.getStr()£º" + so1.getStr());
+        HashMap map = new HashMap();
+        map.put("2", "2");
     }
 }
